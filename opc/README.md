@@ -10,7 +10,7 @@ Configuración del servidor OPC-UA para la interconexión entre PLC, SCADA y gem
 
 ## Contenido esperado
 
-- `configuracion/` — Archivos de configuración del servidor OPC (Ignition OPC-UA o KEPServer)
+- `configuracion/` — Archivos de configuración del servidor OPC
 - `mapeo-tags/` — Tablas de mapeo entre direcciones PLC y tags OPC
 
 ## Arquitectura

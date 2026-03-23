@@ -10,7 +10,7 @@ Diseño de pantallas HMI bajo estándar ISA-101 para operación y monitoreo de l
 
 ## Contenido esperado
 
-- `diseno/` — Mockups de pantallas (navegación, proceso, alarmas, cambio de producto)
+- `diseno/` — Mockups de pantallas: navegación, proceso, alarmas, cambio de producto
 - `simbolos/` — Biblioteca de símbolos P&ID usados en las pantallas
 
 ## Estándar aplicado

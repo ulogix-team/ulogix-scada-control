@@ -10,7 +10,7 @@ Implementación en lógica Ladder del control secuencial diseñado en Grafcet.
 
 ## Contenido esperado
 
-- `programas/` — Rutinas Ladder en Studio 5000 exportadas como `.L5X`
+- `programas/` — Rutinas Ladder exportadas como `.L5X`
 - `tags/` — Base de datos de tags del controlador
 
 ## Responsable

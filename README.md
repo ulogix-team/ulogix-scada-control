@@ -14,7 +14,7 @@
 
 # ulogix-scada-control
 
-Repositorio de supervisión, control e interfaz hombre-máquina. Incluye el diseño de pantallas HMI bajo estándar ISA-101, la implementación SCADA con Ignition, programación Ladder en Studio 5000 / Logix Emulate e integración OPC-UA con el gemelo digital.
+Repositorio de supervisión, control e interfaz hombre-máquina. Incluye el diseño de pantallas HMI bajo estándar ISA-101, implementación SCADA con Ignition, programación Ladder en Studio 5000 / Logix Emulate e integración OPC-UA con el gemelo digital.
 
 <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-section-dark.svg" width="100%"/>
 
@@ -22,11 +22,11 @@ Repositorio de supervisión, control e interfaz hombre-máquina. Incluye el dise
 
 ```
 ulogix-scada-control/
-├── scada/          Ignition: proyectos, pantallas, alarmas
-├── hmi/            Diseño HMI ISA-101, símbolos P&ID
-├── plc-ladder/     Rutinas Ladder Studio 5000, base de tags
-├── ignition/       Scripts Python Ignition, reportes
-└── opc/            Configuración OPC-UA, mapeo de tags
+├── scada/       Ignition: proyectos, pantallas, alarmas
+├── hmi/         Diseño HMI ISA-101, símbolos P&ID
+├── plc-ladder/  Rutinas Ladder Studio 5000, base de tags
+├── ignition/    Scripts Python Ignition, reportes
+└── opc/         Configuración OPC-UA, mapeo de tags
 ```
 
 <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-section-dark.svg" width="100%"/>
@@ -68,9 +68,11 @@ Nivel 1  NX Digital Factory / RobotStudio
 
 <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-section-dark.svg" width="100%"/>
 
-## Repositorios Relacionados
+## Flujo de Trabajo
 
-- [ulogix-manufacturing](https://github.com/ulogix-team/ulogix-manufacturing) — Gemelo digital, lógica de control
-- [ulogix-data-finance](https://github.com/ulogix-team/ulogix-data-finance) — OEE, Power BI
+```
+main ──────────────────► producción estable
+  └── develop ─────────► integración y desarrollo
+```
 
 <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/banners/footer-dark.svg" width="100%"/>
