@@ -1,9 +1,9 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/banners/header-banner.svg" width="100%"/>
+  <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/banners/header-dark.svg" width="100%"/>
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-main.svg" width="100%"/>
+  <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-dark.svg" width="100%"/>
 </p>
 
 <p align="center">
@@ -21,7 +21,7 @@
 Repositorio de supervisión, control e interfaz hombre-máquina. Incluye el diseño de pantallas HMI bajo estándares ISA-101, la implementación SCADA con Ignition, la programación Ladder en Studio 5000 / Logix Emulate y la integración OPC para comunicación con el gemelo digital.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-section.svg" width="100%"/>
+  <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-dark.svg" width="100%"/>
 </p>
 
 ## 📁 Estructura del Repositorio
@@ -57,7 +57,7 @@ ulogix-scada-control/
 ```
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-section.svg" width="100%"/>
+  <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-dark.svg" width="100%"/>
 </p>
 
 ## 🖥️ Arquitectura de Control
@@ -80,7 +80,7 @@ Nivel 1 (Campo)
 ```
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-section.svg" width="100%"/>
+  <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-dark.svg" width="100%"/>
 </p>
 
 ## 🔧 Estándares Aplicados
@@ -93,7 +93,7 @@ Nivel 1 (Campo)
 | **OPC-UA** | Comunicación entre PLC ↔ SCADA ↔ Gemelo Digital |
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-section.svg" width="100%"/>
+  <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-dark.svg" width="100%"/>
 </p>
 
 ## 👥 Responsables
@@ -107,7 +107,7 @@ Nivel 1 (Campo)
 **Supervisores académicos:** Carlos J. Cortés · Luis M. Méndez · Víctor H. Grisales · Ricardo Ramírez · Ubaldo García · Eduardo Barrera
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-section.svg" width="100%"/>
+  <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-dark.svg" width="100%"/>
 </p>
 
 ## 🔗 Repositorios Relacionados
@@ -117,5 +117,5 @@ Nivel 1 (Campo)
 - [ulogix-team.github.io](https://ulogix-team.github.io) — Sitio web del proyecto
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/banners/footer-banner.svg" width="100%"/>
+  <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/banners/footer-dark.svg" width="100%"/>
 </p>
