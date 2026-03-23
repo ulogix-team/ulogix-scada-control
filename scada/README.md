@@ -1,17 +1,21 @@
-<p align="center">
-  <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-dark.svg" width="100%"/>
-</p>
+<img src="https://raw.githubusercontent.com/ulogix-team/assets/main/banners/header-dark.svg" width="100%"/>
 
-# 🖥️ SCADA — Ignition (Inductive Automation)
+<img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-dark.svg" width="100%"/>
 
-Supervisión y control del proceso mediante plataforma SCADA Ignition con comunicación OPC-UA.
+# scada — Ignition (Inductive Automation)
+
+<img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-section-dark.svg" width="100%"/>
+
+Supervisión y control del proceso mediante Ignition SCADA con comunicación OPC-UA.
 
 ## Contenido esperado
 
-- **proyectos/** — Archivos de proyecto Ignition exportados (`.gwbk`)
-- **pantallas/** — Capturas, mockups y documentación de vistas HMI
-- **alarmas/** — Configuración de alarmas, prioridades y registros de eventos
+- `proyectos/` — Archivos de proyecto Ignition exportados (`.gwbk`)
+- `pantallas/` — Capturas, mockups y documentación de vistas HMI
+- `alarmas/` — Configuración de alarmas, prioridades y registros de eventos
 
 ## Responsable
 
-Juan F. Triana · [@jutrianaa](https://github.com/jutrianaa)
+Juan Felipe Triana Aguilera · [@jutrianaa](https://github.com/jutrianaa)
+
+<img src="https://raw.githubusercontent.com/ulogix-team/assets/main/banners/footer-dark.svg" width="100%"/>

@@ -1,27 +1,31 @@
-<p align="center">
-  <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-dark.svg" width="100%"/>
-</p>
+<img src="https://raw.githubusercontent.com/ulogix-team/assets/main/banners/header-dark.svg" width="100%"/>
 
-# 🔌 OPC — Comunicación OPC-UA
+<img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-dark.svg" width="100%"/>
 
-Configuración del servidor OPC-UA para interconexión entre PLC, SCADA y gemelo digital.
+# opc — Comunicación OPC-UA
+
+<img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-section-dark.svg" width="100%"/>
+
+Configuración del servidor OPC-UA para la interconexión entre PLC, SCADA y gemelo digital.
 
 ## Contenido esperado
 
-- **configuracion/** — Archivos de configuración del servidor OPC (Ignition OPC-UA o KEPServer)
-- **mapeo-tags/** — Tablas de mapeo entre direcciones PLC y tags OPC (`.csv`, `.xlsx`)
+- `configuracion/` — Archivos de configuración del servidor OPC (Ignition OPC-UA o KEPServer)
+- `mapeo-tags/` — Tablas de mapeo entre direcciones PLC y tags OPC
 
-## Arquitectura de comunicación
+## Arquitectura
 
 ```
 Studio 5000 / Logix Emulate
-        ↕  (OPC-UA)
+      ↕  OPC-UA
 Ignition SCADA  ←→  Power BI / Python
-        ↕  (señales I/O)
+      ↕  Señales I/O
 NX Digital Factory / RobotStudio
 ```
 
-## Responsable
+## Responsables
 
-Andrés M. Morales · [@mora200217](https://github.com/mora200217)  
-Juan F. Triana · [@jutrianaa](https://github.com/jutrianaa)
+Andrés Mauricio Morales Martínez · [@mora200217](https://github.com/mora200217)  
+Juan Felipe Triana Aguilera · [@jutrianaa](https://github.com/jutrianaa)
+
+<img src="https://raw.githubusercontent.com/ulogix-team/assets/main/banners/footer-dark.svg" width="100%"/>

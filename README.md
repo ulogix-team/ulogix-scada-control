@@ -1,121 +1,76 @@
-<p align="center">
-  <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/banners/header-dark.svg" width="100%"/>
-</p>
+<img src="https://raw.githubusercontent.com/ulogix-team/assets/main/banners/header-dark.svg" width="100%"/>
+
+<img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-dark.svg" width="100%"/>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-dark.svg" width="100%"/>
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Ignition-SCADA-7C3AED?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Ignition-SCADA-000000?style=flat-square"/>
   &nbsp;
-  <img src="https://img.shields.io/badge/OPC--UA-Comunicación-a855f7?style=flat-square"/>
+  <img src="https://img.shields.io/badge/OPC--UA-Comunicación-000000?style=flat-square"/>
   &nbsp;
-  <img src="https://img.shields.io/badge/ISA--101-HMI%20Design-7C3AED?style=flat-square"/>
+  <img src="https://img.shields.io/badge/ISA--101-HMI_Design-000000?style=flat-square"/>
   &nbsp;
-  <img src="https://img.shields.io/badge/Ladder-Studio%205000-0e0525?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Ladder-Studio_5000-000000?style=flat-square"/>
 </p>
 
-# ulogix-scada-control · SCADA, HMI y Control PLC
+# ulogix-scada-control
 
-Repositorio de supervisión, control e interfaz hombre-máquina. Incluye el diseño de pantallas HMI bajo estándares ISA-101, la implementación SCADA con Ignition, la programación Ladder en Studio 5000 / Logix Emulate y la integración OPC para comunicación con el gemelo digital.
+Repositorio de supervisión, control e interfaz hombre-máquina. Incluye el diseño de pantallas HMI bajo estándar ISA-101, la implementación SCADA con Ignition, programación Ladder en Studio 5000 / Logix Emulate e integración OPC-UA con el gemelo digital.
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-dark.svg" width="100%"/>
-</p>
+<img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-section-dark.svg" width="100%"/>
 
-## 📁 Estructura del Repositorio
+## Estructura
 
 ```
 ulogix-scada-control/
-│
-├── scada/                      # Sistema SCADA (Ignition)
-│   ├── proyectos/              # Archivos de proyecto Ignition (.gwbk)
-│   ├── pantallas/              # Diseño de vistas y navegación
-│   ├── alarmas/                # Configuración de alarmas y eventos
-│   └── README.md
-│
-├── hmi/                        # Interfaz Hombre-Máquina
-│   ├── diseno/                 # Mockups y estándares ISA-101
-│   ├── simbolos/               # Biblioteca de símbolos P&ID
-│   └── README.md
-│
-├── plc-ladder/                 # Programación PLC Ladder
-│   ├── programas/              # Rutinas Ladder en Studio 5000
-│   ├── tags/                   # Base de tags del PLC
-│   └── README.md
-│
-├── ignition/                   # Configuración específica Ignition
-│   ├── scripts/                # Scripts Python Ignition
-│   ├── reportes/               # Módulo de reportes
-│   └── README.md
-│
-└── opc/                        # Comunicación OPC-UA
-    ├── configuracion/          # Configuración del servidor OPC
-    ├── mapeo-tags/             # Mapeo de tags OPC ↔ PLC
-    └── README.md
+├── scada/          Ignition: proyectos, pantallas, alarmas
+├── hmi/            Diseño HMI ISA-101, símbolos P&ID
+├── plc-ladder/     Rutinas Ladder Studio 5000, base de tags
+├── ignition/       Scripts Python Ignition, reportes
+└── opc/            Configuración OPC-UA, mapeo de tags
 ```
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-dark.svg" width="100%"/>
-</p>
+<img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-section-dark.svg" width="100%"/>
 
-## 🖥️ Arquitectura de Control
+## Arquitectura de Comunicación
 
 ```
-Nivel 4 (ERP/MES)
-     │ Power BI / Python Analytics
-     │
-Nivel 3 (SCADA)
-     │ Ignition (Inductive Automation)
-     │ OPC-UA Server
-     │
-Nivel 2 (Control)
-     │ Studio 5000 / Logix Emulate
-     │ Grafcet → Ladder
-     │
-Nivel 1 (Campo)
-     │ Sensores / Actuadores virtuales
-     │ NX Digital Factory / RobotStudio
+Nivel 4  Power BI / Python Analytics
+           │ OPC-UA / REST
+Nivel 3  Ignition SCADA
+           │ OPC-UA
+Nivel 2  Studio 5000 / Logix Emulate
+           │ Señales I/O virtuales
+Nivel 1  NX Digital Factory / RobotStudio
 ```
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-dark.svg" width="100%"/>
-</p>
+<img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-section-dark.svg" width="100%"/>
 
-## 🔧 Estándares Aplicados
+## Estándares Aplicados
 
 | Estándar | Aplicación |
 |---|---|
 | **ISA-95** | Arquitectura de automatización por niveles |
 | **ISA-101** | Diseño de pantallas HMI |
-| **IEC 61131-3** | Lenguaje Ladder y Grafcet (SFC) |
-| **OPC-UA** | Comunicación entre PLC ↔ SCADA ↔ Gemelo Digital |
+| **IEC 61131-3** | Lenguajes Ladder y Grafcet (SFC) |
+| **OPC-UA** | Comunicación PLC ↔ SCADA ↔ Gemelo Digital |
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-dark.svg" width="100%"/>
-</p>
+<img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-section-dark.svg" width="100%"/>
 
-## 👥 Responsables
+## Responsables
 
 | Módulo | Responsable | GitHub |
-|---|---|---|
-| SCADA / HMI / MES | Juan F. Triana | [@jutrianaa](https://github.com/jutrianaa) |
-| PLC / Ladder / Grafcet | Juan J. Díaz | [@Judiazgu](https://github.com/Judiazgu) |
-| Arquitectura de Red / OPC | Andrés M. Morales | [@mora200217](https://github.com/mora200217) |
+|---|---|:---:|
+| SCADA / HMI / MES | Juan Felipe Triana Aguilera | [@jutrianaa](https://github.com/jutrianaa) |
+| PLC / Ladder / Grafcet | Juan José Díaz Guerrero | [@Judiazgu](https://github.com/Judiazgu) |
+| Arquitectura de Red / OPC | Andrés Mauricio Morales Martínez | [@mora200217](https://github.com/mora200217) |
 
-**Supervisores académicos:** Carlos J. Cortés · Luis M. Méndez · Víctor H. Grisales · Ricardo Ramírez · Ubaldo García · Eduardo Barrera
+**Supervisores:** Carlos J. Cortés · Luis M. Méndez · Víctor H. Grisales · Ricardo Ramírez · Ubaldo García · Eduardo Barrera
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-dark.svg" width="100%"/>
-</p>
+<img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-section-dark.svg" width="100%"/>
 
-## 🔗 Repositorios Relacionados
+## Repositorios Relacionados
 
-- [ulogix-manufacturing](https://github.com/ulogix-team/ulogix-manufacturing) — Gemelo digital, PLC físico
+- [ulogix-manufacturing](https://github.com/ulogix-team/ulogix-manufacturing) — Gemelo digital, lógica de control
 - [ulogix-data-finance](https://github.com/ulogix-team/ulogix-data-finance) — OEE, Power BI
-- [ulogix-team.github.io](https://ulogix-team.github.io) — Sitio web del proyecto
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/banners/footer-dark.svg" width="100%"/>
-</p>
+<img src="https://raw.githubusercontent.com/ulogix-team/assets/main/banners/footer-dark.svg" width="100%"/>
