@@ -3,6 +3,10 @@
 <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-dark.svg" width="100%"/>
 
 <p align="center">
+  <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/logos/ulogix-icon-transparent-dark.svg" height="55"/>
+</p>
+
+<p align="center">
   <img src="https://img.shields.io/badge/Ignition-SCADA-000000?style=flat-square"/>
   &nbsp;
   <img src="https://img.shields.io/badge/OPC--UA-Comunicación-000000?style=flat-square"/>
@@ -14,20 +18,34 @@
 
 # ulogix-scada-control
 
-Repositorio de supervisión, control e interfaz hombre-máquina. Incluye el diseño de pantallas HMI bajo estándar ISA-101, implementación SCADA con Ignition, programación Ladder en Studio 5000 / Logix Emulate e integración OPC-UA con el gemelo digital.
+Repositorio de supervisión, control e interfaz hombre-máquina. Diseño HMI bajo estándar ISA-101, implementación SCADA con Ignition, programación Ladder en Studio 5000 / Logix Emulate e integración OPC-UA con el gemelo digital.
 
 <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-section-dark.svg" width="100%"/>
 
-## Estructura
+## Módulos
 
-```
-ulogix-scada-control/
-├── scada/       Ignition: proyectos, pantallas, alarmas
-├── hmi/         Diseño HMI ISA-101, símbolos P&ID
-├── plc-ladder/  Rutinas Ladder Studio 5000, base de tags
-├── ignition/    Scripts Python Ignition, reportes
-└── opc/         Configuración OPC-UA, mapeo de tags
-```
+<table>
+<tr>
+  <td align="center"><img src="https://raw.githubusercontent.com/ulogix-team/assets/main/icons/node-tech.svg" width="50"/></td>
+  <td><strong>scada/</strong> — Ignition: proyectos (.gwbk), pantallas HMI, alarmas y eventos</td>
+</tr>
+<tr>
+  <td align="center"><img src="https://raw.githubusercontent.com/ulogix-team/assets/main/icons/node-tech.svg" width="50"/></td>
+  <td><strong>hmi/</strong> — Diseño bajo ISA-101: jerarquía de pantallas, símbolos P&ID</td>
+</tr>
+<tr>
+  <td align="center"><img src="https://raw.githubusercontent.com/ulogix-team/assets/main/icons/node-tech.svg" width="50"/></td>
+  <td><strong>plc-ladder/</strong> — Rutinas Ladder (.L5X), base de tags del controlador</td>
+</tr>
+<tr>
+  <td align="center"><img src="https://raw.githubusercontent.com/ulogix-team/assets/main/icons/node-tech.svg" width="50"/></td>
+  <td><strong>ignition/</strong> — Scripts Python Ignition, reportes programados</td>
+</tr>
+<tr>
+  <td align="center"><img src="https://raw.githubusercontent.com/ulogix-team/assets/main/icons/node-tech.svg" width="50"/></td>
+  <td><strong>opc/</strong> — Configuración OPC-UA, mapeo de tags PLC ↔ SCADA</td>
+</tr>
+</table>
 
 <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-section-dark.svg" width="100%"/>
 
