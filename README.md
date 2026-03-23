@@ -13,37 +13,48 @@
   &nbsp;
   <img src="https://img.shields.io/badge/ISA--101-HMI_Design-000000?style=flat-square"/>
   &nbsp;
-  <img src="https://img.shields.io/badge/Ladder-Studio_5000-000000?style=flat-square"/>
+  <img src="https://img.shields.io/badge/MQTT-IoT_Cloud-000000?style=flat-square"/>
 </p>
 
 # ulogix-scada-control
 
-Repositorio de supervisión, control e interfaz hombre-máquina. Diseño HMI bajo estándar ISA-101, implementación SCADA con Ignition, programación Ladder en Studio 5000 / Logix Emulate e integración OPC-UA con el gemelo digital.
+Repositorio de supervisión, control e interfaz hombre-máquina. Diseño HMI ISA-101, SCADA Ignition, Ladder en Studio 5000, OPC-UA y MQTT para IoT/Cloud.
 
 <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-section-dark.svg" width="100%"/>
 
-## Módulos
+## Estructura
+
+```
+ulogix-scada-control/
+├── scada/       Ignition: proyectos (.gwbk), pantallas, alarmas
+├── hmi/         Diseño ISA-101: jerarquía de pantallas, símbolos P&ID
+├── plc-ladder/  Rutinas Ladder (.L5X), base de tags
+├── ignition/    Scripts Python Ignition, reportes programados
+└── opc/         Configuración OPC-UA, mapeo de tags PLC ↔ SCADA
+```
+
+<img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-section-dark.svg" width="100%"/>
+
+## Tareas por Módulo
 
 <table>
 <tr>
   <td align="center"><img src="https://raw.githubusercontent.com/ulogix-team/assets/main/icons/node-tech.svg" width="50"/></td>
-  <td><strong>scada/</strong> — Ignition: proyectos (.gwbk), pantallas HMI, alarmas y eventos</td>
+  <td>
+    <strong>plc-ladder/</strong> — Módulo 6 — Controladores Industriales<br/>
+    • Implementación Ladder en Logix Emulate (Apr 22)<br/>
+    • Validación funcional PLC – Gemelo Digital (Apr 29)
+  </td>
 </tr>
 <tr>
   <td align="center"><img src="https://raw.githubusercontent.com/ulogix-team/assets/main/icons/node-tech.svg" width="50"/></td>
-  <td><strong>hmi/</strong> — Diseño bajo ISA-101: jerarquía de pantallas, símbolos P&ID</td>
-</tr>
-<tr>
-  <td align="center"><img src="https://raw.githubusercontent.com/ulogix-team/assets/main/icons/node-tech.svg" width="50"/></td>
-  <td><strong>plc-ladder/</strong> — Rutinas Ladder (.L5X), base de tags del controlador</td>
-</tr>
-<tr>
-  <td align="center"><img src="https://raw.githubusercontent.com/ulogix-team/assets/main/icons/node-tech.svg" width="50"/></td>
-  <td><strong>ignition/</strong> — Scripts Python Ignition, reportes programados</td>
-</tr>
-<tr>
-  <td align="center"><img src="https://raw.githubusercontent.com/ulogix-team/assets/main/icons/node-tech.svg" width="50"/></td>
-  <td><strong>opc/</strong> — Configuración OPC-UA, mapeo de tags PLC ↔ SCADA</td>
+  <td>
+    <strong>hmi/ + scada/ + opc/ + ignition/</strong> — Módulo 7 — SCADA<br/>
+    • Diseño de interfaz HMI bajo estándar ISA-101 (Apr 29)<br/>
+    • Configuración comunicación OPC entre PLC y SCADA (May 6)<br/>
+    • Implementación del SCADA en Ignition (May 7)<br/>
+    • Comunicación MQTT para IoT/Cloud (May 7)
+  </td>
 </tr>
 </table>
 
@@ -52,13 +63,13 @@ Repositorio de supervisión, control e interfaz hombre-máquina. Diseño HMI baj
 ## Arquitectura de Comunicación
 
 ```
-Nivel 4  Power BI / Python Analytics
-           │ OPC-UA / REST
-Nivel 3  Ignition SCADA
+Nivel 4  Power BI / Python Analytics  ←── May 9
+           │ OPC-UA / REST / MQTT
+Nivel 3  Ignition SCADA               ←── May 7
            │ OPC-UA
-Nivel 2  Studio 5000 / Logix Emulate
+Nivel 2  Studio 5000 / Logix Emulate  ←── Apr 22
            │ Señales I/O virtuales
-Nivel 1  NX Digital Factory / RobotStudio
+Nivel 1  NX Digital Factory           ←── Apr 18
 ```
 
 <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-section-dark.svg" width="100%"/>
@@ -68,9 +79,10 @@ Nivel 1  NX Digital Factory / RobotStudio
 | Estándar | Aplicación |
 |---|---|
 | **ISA-95** | Arquitectura de automatización por niveles |
-| **ISA-101** | Diseño de pantallas HMI |
-| **IEC 61131-3** | Lenguajes Ladder y Grafcet (SFC) |
-| **OPC-UA** | Comunicación PLC ↔ SCADA ↔ Gemelo Digital |
+| **ISA-101** | Diseño de pantallas HMI (Apr 29) |
+| **IEC 61131-3** | Lenguajes Ladder y Grafcet (Apr 22) |
+| **OPC-UA** | Comunicación PLC ↔ SCADA ↔ Gemelo Digital (May 6) |
+| **MQTT** | Comunicación IoT/Cloud (May 7) |
 
 <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-section-dark.svg" width="100%"/>
 
@@ -78,9 +90,9 @@ Nivel 1  NX Digital Factory / RobotStudio
 
 | Módulo | Responsable | GitHub |
 |---|---|:---:|
-| SCADA / HMI / MES | Juan Felipe Triana Aguilera | [@jutrianaa](https://github.com/jutrianaa) |
+| SCADA / HMI / MQTT / MES | Juan Felipe Triana Aguilera | [@jutrianaa](https://github.com/jutrianaa) |
 | PLC / Ladder / Grafcet | Juan José Díaz Guerrero | [@Judiazgu](https://github.com/Judiazgu) |
-| Arquitectura de Red / OPC | Andrés Mauricio Morales Martínez | [@mora200217](https://github.com/mora200217) |
+| Arquitectura / OPC-UA / Red | Andrés Mauricio Morales Martínez | [@mora200217](https://github.com/mora200217) |
 
 **Supervisores:** Carlos J. Cortés · Luis M. Méndez · Víctor H. Grisales · Ricardo Ramírez · Ubaldo García · Eduardo Barrera
 
